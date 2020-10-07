@@ -1,0 +1,62 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+main {
+	background-color: #ccc;
+}
+h1 {
+	color: magenta;
+	font-size: 2.5rem;
+	margin-left: 0.75rem;
+}
+h2 {
+	font-size: 1.875rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+header {
+	margin-bottom: 1.5rem;
+}
+main > section {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0.75rem;
+}
+main > section > section {
+	background-color: white;
+	border: 0.0625rem solid black;
+	padding: 1rem;
+	margin: 1rem auto;
+}
+@media(min-width: 48rem){
+	main > section > section {
+		display: flex;
+		justify-content: space-between;
+	}
+	main > section > section > div:first-child {
+		flex-basis: 40%;
+	}
+	main > section > section > div:last-child {
+		flex-basis: calc(100% - 1rem - 40%);
+	}
+}
+
+@media(min-width: 64rem) {
+	main > section {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	h2 {
+		flex-basis: 100%;
+	}
+	main > section > section {
+		flex-basis: 32%;
+		display: flex;
+		flex-direction: column;
+	}
+}
+footer p {
+	margin-left: 0.75rem;
+}
